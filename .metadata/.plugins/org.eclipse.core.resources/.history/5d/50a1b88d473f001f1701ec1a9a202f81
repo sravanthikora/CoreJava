@@ -1,0 +1,20 @@
+package com.example.demo.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.models.registration;
+import com.example.demo.repository.registration_repository;
+
+@Service
+public class registration_service {
+	
+	@Autowired
+	registration_repository repo;
+	//access modifier model name method_name(model_name nickname)
+	public registration adding_student(registration reg) {
+		return repo.save(reg);
+		
+	}
+
+}

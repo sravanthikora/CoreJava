@@ -1,0 +1,29 @@
+package com.example.demo.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.models.registration;
+import com.example.demo.repository.registration_repository;
+
+@Service
+public class registration_service {
+	
+	@Autowired
+	registration_repository repo;
+	//access modifier model name method_name(model_name nickname)
+	public registration adding_student(registration reg) {
+		return repo.save(reg);
+		
+	}
+	public Iterable<registration> multi_insertion(List<registration> reg){
+		return repo.saveAll(reg);
+		
+	}
+	public Iterable<registration> fetch_all(List<registration> reg) {
+		return repo.findAll();
+	}
+
+}

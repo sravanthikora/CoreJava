@@ -1,0 +1,31 @@
+package com.example.demo.models;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+//generating getters and setters
+
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+public class registration {
+	//creating column names
+	@Id
+	private int id;
+	
+	private String name;
+	
+	private String email;
+	
+	private long phno;
+	
+	
+	
+
+}
